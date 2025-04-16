@@ -2,6 +2,7 @@ header {
     background-color: var(--primary);
     color: var(--background);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
@@ -36,6 +37,7 @@ header {
     ul {
         display: flex;
         gap: 1.3rem;
+        padding: 0;
         li {
             list-style: none;
             a{
@@ -55,6 +57,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    flex-wrap: wrap;
     &::before {
         position: absolute;
         left: 0;
@@ -125,7 +128,7 @@ header {
             font-size: 18px;
         }
     }
-    .logo{
+    img{
         width: 100%;
         opacity: 0;
         transition: all 1s ease-out;
@@ -323,7 +326,30 @@ section {
 
 
 .internista.visible{
-    .text,.logo{
+    .text,img{
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 32px !important;
+    }
+
+    .internista{
+        flex-wrap: wrap;
+    }
+
+    .servicios{
+        .cards{
+            .card{
+                height: auto;
+                .title{
+                    span{
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
     }
 }
