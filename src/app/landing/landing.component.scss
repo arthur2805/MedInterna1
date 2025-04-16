@@ -1,0 +1,329 @@
+header {
+    background-color: var(--primary);
+    color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h2 {
+            font-family: var(--font-titles);
+            font-size: 28px;
+        }
+
+        .logo-content {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 24px;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 1.3rem;
+        li {
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: var(--background);
+                scroll-behavior: smooth;
+            }
+        }
+    }
+}
+
+.hero {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 140px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        content: ' ';
+        z-index: 1;
+        background: url("/assets/img/hero-backgroud.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .text {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s ease-out;
+        h1 {
+            font-family: var(--font-titles);
+            font-size: 64px;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .logo {
+        background: var(--background);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 1s ease-out;
+
+        img {
+            width: 75%;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.internista {
+    padding: 3rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+    background: url("/assets/img/bg-internista.svg");
+    background-position-y: 100%;
+    background-position-x: -10rem;
+    background-repeat: no-repeat;
+    .text {
+        opacity: 0;
+        transition: all 1s ease-out;
+        h1 {
+            font-family: var(--font-titles);
+            font-size: 72px;
+            background-image: url("/assets/img/subrayado.svg");
+            background-position: bottom left;
+            background-repeat: no-repeat;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .logo{
+        width: 100%;
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+}
+
+.servicios {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 5rem 10%;
+    h1 {
+        font-size: 72px;
+        margin: 0 0 5rem;
+        font-family: var(--font-titles);
+        text-align: center;
+        background-image: url("/assets/img/subrayado.svg");
+        background-position-x: center;
+        background-position-y: calc(100% + 1rem);
+        background-repeat: no-repeat;
+    }
+
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .card {
+            padding: 1rem;
+            background-color: var(--background);
+            color: var(--black);
+            border-radius: 30px;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                span {
+                    font-family: var(--font-titles);
+                    font-size: 36px;
+                }
+            }
+
+            p {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.enfermedades {
+    padding: 5rem 10%;
+
+    h1 {
+        font-size: 72px;
+        font-family: var(--font-titles);
+        text-align: center;
+    }
+
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+        padding: 1rem;
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.05s linear;
+            will-change: transform;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 480px;
+            margin-right: 1rem;
+            background: linear-gradient(90deg,rgba(248, 249, 250, .26) 10%, rgba(30, 58, 138, .26) 32%, rgba(96, 165, 250, .26) 63%, rgba(245, 245, 220, .26) 90%);
+            border: none;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 4px 10px 5px rgba(30,58,138,0.5);
+            -moz-box-shadow: 0 4px 10px 5px rgba(30,58,138,0.5);
+            box-shadow: 0 4px 10px 5px rgba(30,58,138,0.5);
+            margin: 0 4rem 0 0;
+            .header {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                h2 {
+                    font-family: var(--font-titles);
+                    font-size: 36px;
+                }
+
+                img {
+                    width: 42px;
+                    aspect-ratio: 1;
+                }
+            }
+
+            .text {
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.ubicacion {
+    padding: 5rem 10%;
+    background-color: var(--primary);
+    color: var(--background);
+
+    h1 {
+        font-size: 72px;
+        font-family: var(--font-titles);
+        text-align: center;
+        background-image: url("/assets/img/subrayado.svg");
+        background-position-x: center;
+        background-position-y: calc(100% + 1rem);
+        background-repeat: no-repeat;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+footer {
+    color: var(--background);
+    background-color: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    z-index: 9;
+    bottom: 0;
+    .logo-nombre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .logo-content {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 24px;
+                aspect-ratio: 1;
+            }
+        }
+        span {
+            font-family: var(--font-titles);
+            font-size: 28px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease-out;
+  
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.hero.visible{
+    .text,.logo{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.internista.visible{
+    .text,.logo{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,15 @@
+//////////Styles import
+@import url(../public/assets/styles/theme.scss);
+
+
+html,
+body{
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    color: var(--black);
+    background-color: var(--background);
+}

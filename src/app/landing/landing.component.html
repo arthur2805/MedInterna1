@@ -1,0 +1,174 @@
+<header>
+    <section class="logo">
+        <div class="logo-content">
+            <img src="./MedInterna.png" alt="">
+        </div>
+        <h2>
+            MedInterna
+        </h2>
+    </section>
+
+        <ul>
+            <li>
+               <a href="#inicio">Inicio</a> 
+            </li>
+            <li>
+                <a href="#servicios">Servicios</a>
+            </li>
+            <li>
+                <a href="#enfermedades">Enfermedades Tratadas</a>
+            </li>
+            <li>
+                <a href="#ubicacion">Ubicacion</a>
+            </li>
+        </ul>
+</header>
+
+<section class="hero" #animSection id="inicio">
+    <div class="text">
+        <h1>Tu salud integral, en manos expertas</h1>
+        <p>Atencion especializada en Medicina interna. Prevención, diagnóstico y tratamiento con enfoque humano.</p>
+    </div>
+
+    <div class="logo">
+        <img src="./MedInterna.png" alt="">
+    </div>
+</section>
+
+<section class="internista" #animSection id="internista">
+    <div class="text">
+        <h1>¿Qué es un médico internista?</h1>
+        <p>Un médico internista es especialista en la prevención, diagnóstico y tratamiento de enfermedades en adultos. Su enfoque es integral, considerando al paciente como un todo.</p>
+    </div>
+
+    <img src="./assets/img/doctor-landig.svg" alt="">
+</section>
+
+<section class="servicios" #animSection id="servicios">
+    <h1>Servicios ofertados</h1>
+    <div class="cards">
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/estetoscopio-icon.svg">
+                <span>
+                    Atención integral
+                </span>
+            </div>
+
+            <p>
+                Diagnóstico y tratamiento de enfermedades agudas y crónicas complejas, manejo de comorbilidades y coordinación del cuidado.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/lupa-icon.svg">
+                <span>
+                    Diagnóstico diferencial complejo
+                </span>
+            </div>
+
+            <p>
+                Evaluación de síntomas multiorgánicos como fatiga, fiebre o pérdida de peso inexplicada.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/jeringa-icon.svg">
+                <span>
+                    Prevención y control de enfermedades
+                </span>
+            </div>
+
+            <p>
+                Chequeos médicos, detección precoz y control de factores de riesgo cardiovascular.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/hospital-icon.svg">
+                <span>
+                    Hospitalización y manejo de pacientes críticos
+                </span>
+            </div>
+
+            <p>
+                Atención de infecciones graves, enfermedades multisistémicas y descompensaciones crónicas.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/med-icon.svg">
+                <span>
+                    Cuidado paliativo y manejo del dolor
+                </span>
+            </div>
+
+            <p>
+                Alivio de síntomas en enfermedades avanzadas o terminales.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <img src="/assets/icons/foco-icon.svg">
+                <span>
+                    Educación del paciente
+                </span>
+            </div>
+
+            <p>
+                Explicaciones claras sobre diagnóstico, tratamiento y seguimiento.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="enfermedades" #animSection id="enfermedades">
+    <h1>Enfermedades comunes a tratar</h1>
+
+    <div class="carousel-container">
+        <div class="carousel-track" [style.transform]="'translateX(' + translateX + 'px)'">
+          <div class="carousel-item" *ngFor="let item of duplicatedItems">
+            <div class="header">
+                <img [src]="item.icon" alt="">
+                <h2>{{ item.title }}</h2>
+            </div>
+            <p>{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+      
+</section>
+
+<section class="ubicacion" #animSection id="ubicacion">
+    <h1>Donde encontrarnos</h1>
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.4714522285335!2d-98.88451226742151!3d19.30533808457607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce1f9d06f1eca3%3A0xffd08d7c5c30b0b3!2sGynefemme%20ixtapaluca!5e0!3m2!1ses-419!2smx!4v1744765928001!5m2!1ses-419!2smx"
+            width="100%"
+            height="656"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <p>Capulín 2-Int. 50, La Venta, 56530 Mexico, Méx.</p>
+</section>
+
+<footer>
+    <section class="logo-nombre">
+        <div class="logo-content">
+            <img src="./MedInterna.png" alt="">
+        </div>
+        <span>MedInterna</span>
+    </section>
+    <p>
+        Atención especializada en Medicina Interna. Prevención, diagnóstico y tratamiento con enfoque humano.
+    </p>
+</footer>
