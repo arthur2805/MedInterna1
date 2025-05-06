@@ -352,6 +352,9 @@ section {
     }
 
     .servicios{
+        h1{
+            background-position-y: calc(100% + 1.6rem);
+        }
         .cards{
             .card{
                 height: auto;
@@ -361,6 +364,12 @@ section {
                     }
                 }
             }
+        }
+    }
+
+    .ubicacion{
+        h1{
+            background-position-y: calc(100% + 1.6rem);   
         }
     }
 }
